@@ -1,0 +1,11 @@
+.header__circle-gradient {
+  position: absolute;
+  top: -250px;
+  left: -200px;
+  background-image: radial-gradient(circle, var(--green), var(--background), var(--background));
+  width: 500px;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
