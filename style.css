@@ -1,11 +1,61 @@
-/* Root */
-@import url(./blocks/root/root.css);
-@import url(./blocks/html/html.css);
+@font-face {
+  font-family: 'Rubik', sans-serif;
+  src: url('./fonts/Rubik-VariableFont_wght.ttf');
+}
+
+:root {
+  --background: #000;
+  --main-color: #fff;
+  --green: #76ff5f;
+}
+
+.html {
+  font-family: 'Rubik', sans-serif;
+  background-color: var(--background);
+  color: var(--main-color);
+}
+
+.body {
+  margin: 0;
+  padding: 0;
+
+}
 
 /* Header */
-@import url(./blocks/header/header.css);
-@import url(./blocks/header/__title/header__title.css);
-@import url(./blocks/header/__circle-gradient/header__circle-gradient.css);
 
-/* Body */
-@import url(./blocks/body/body.css);
+.header {
+  position: relative;
+  max-width: 50rem;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.header__title {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-size: 100px;
+  font-weight: 600;
+  line-height: .85;
+  width: 450px;
+}
+
+.header__title::-moz-selection {
+  color: var(--green);
+}
+
+.header__title::selection {
+  color: var(--green);
+}
+
+.header__circle-gradient {
+  position: absolute;
+  top: -250px;
+  left: -200px;
+  background-image: radial-gradient(circle, var(--green), var(--background), var(--background));
+  width: 500px;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
