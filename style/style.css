@@ -13,6 +13,7 @@
   font-family: 'Rubik', sans-serif;
   background-color: var(--background);
   color: var(--main-color);
+  overflow-x: hidden;
 }
 
 .body {
@@ -25,7 +26,6 @@
 
 .header {
   position: relative;
-  max-width: 50rem;
   margin: 0 auto;
   margin-top: 10px;
 }
