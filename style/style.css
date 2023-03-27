@@ -67,7 +67,7 @@
   min-height: 500px;
   margin: 0;
   background-color: black;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 .header__content {
