@@ -53,6 +53,13 @@
   animation-iteration-count: infinite;
 }
 
+.overflow {
+  overflow: hidden;
+  position: absolute;
+  height: 370px;
+  width: 600px;
+}
+
 /* Header */
 
 .header {
@@ -116,8 +123,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  top: 125px;
-  left: 150px;
+  top: 100px;
+  left: 140px;
 }
 
 .dzen__leters {
@@ -128,7 +135,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* Content */
