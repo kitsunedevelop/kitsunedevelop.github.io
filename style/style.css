@@ -3,61 +3,134 @@
   src: url('./fonts/Rubik-VariableFont_wght.ttf');
 }
 
+@keyframes rotation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fluctuation {
+  0% {
+    margin-top: 0px;
+  }
+  50% {
+    margin-top: 10px;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
+
 :root {
-  --background: #000;
-  --main-color: #fff;
   --green: #76ff5f;
 }
 
 .html {
-  font-family: 'Rubik', sans-serif;
-  background-color: var(--background);
-  color: var(--main-color);
-  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
 }
 
 .body {
   margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+}
+
+.rotation {
+  animation-name: rotation;
+  animation-duration: 25s;
+  animation-direction: reverse;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.fluctuation {
+  animation-name: fluctuation;
+  animation-duration: 2s;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 /* Header */
 
 .header {
+  display: flex;
+  justify-content: center;
+  min-height: 500px;
+  margin: 0;
+  background-color: black;
+}
+
+.header__content {
   position: relative;
-  margin: 0 auto;
+  max-width: 50%;
   margin-top: 10px;
 }
 
-.header__title {
-  margin: 0;
-  padding: 0;
-  position: relative;
-  font-size: 100px;
-  font-weight: 600;
-  line-height: .85;
-  width: 450px;
+.header__logo {
+  width: 30px;
+  height: 30px;
+  background: url(../img/logo.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.header__title::-moz-selection {
+.header__text {
+  font-size: 21px;
+  line-height: 28px;
+  color: white;
+  margin: 10px 0 0;
+  z-index: 10px;
+}
+
+.header__text::selection {
   color: var(--green);
 }
 
-.header__title::selection {
-  color: var(--green);
+.header__text_decoration_line-through {
+  text-decoration: line-through;
+  text-decoration-color: var(--green);
 }
 
-.header__circle-gradient {
+.header__text_decoration_line-through::selection {
+  color: var(--green);
+  text-decoration-color: white;
+}
+
+.header__dzen {
   position: absolute;
-  top: -250px;
-  left: -200px;
-  background-image: radial-gradient(circle, var(--green), var(--background), var(--background));
-  width: 500px;
-  height: 500px;
+  left: -50px;
+  bottom: 70px;
+  width: 300px;
+  height: 300px;
+  box-sizing: border-box;
+}
+
+.dzen__man {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-image: url(../img/dzen-man.svg);
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  top: 125px;
+  left: 150px;
 }
 
+.dzen__leters {
+  position: absolute;
+  height: 600px;
+  width: 600px;
+  background-image: url(../img/dzen-leters.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* Content */
+.content {
+  z-index: 2;
+}
