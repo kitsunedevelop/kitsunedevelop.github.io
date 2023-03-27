@@ -30,6 +30,7 @@
 
 .html {
   font-family: 'Roboto', sans-serif;
+  background-color: black;
 }
 
 .body {
@@ -132,5 +133,7 @@
 
 /* Content */
 .content {
+  background-color: white;
+  height: 100vh;
   z-index: 2;
 }
